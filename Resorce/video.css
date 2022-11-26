@@ -1,0 +1,67 @@
+.container .heading{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+/* .video-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.video-container .video{
+    height: 12rem;
+    width: 19rem;
+    margin: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.video-container .video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    outline: none;
+    border: none;
+    cursor: pointer;
+} */
+.container .video-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container .video-container .video{
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border: none;
+    width: 350px;
+    border-radius: 5px;
+}
+.container .video-container .video:hover{
+    transition: .2s linear;
+    transform: scale(1.3);
+}
+.container .video-container .video video{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.container .video-container .video h3{
+    font-size: 20px;
+    text-align: left;
+}
+.container .video-container .video p{
+    font-size: 10px;
+    text-align: right;
+    margin-bottom: -5px;
+}

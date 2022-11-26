@@ -1,0 +1,46 @@
+/* .form-container{
+    background: gray;
+    width: 1000px;
+    height: auto;
+    position: static;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 120px;
+    box-shadow: 0 0 20px 0px rgba(0, 0,0, 0.1);
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: black;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+#Indicator{
+    width: 100px;
+    background: whitesmoke;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+} */
+

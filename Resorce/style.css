@@ -1,0 +1,10 @@
+.navbar-nav{
+    margin-right: 100px;
+}
+.link{
+    text-decoration: none;
+}
+.link :hover{
+    text-decoration: underline;
+    color: red;
+}

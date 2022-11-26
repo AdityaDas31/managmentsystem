@@ -1,0 +1,14 @@
+.logout{
+    text-decoration: none;
+}
+.logout :hover{
+    text-decoration: underline;
+    color: red;
+}
+.dropdown-item{
+    text-decoration: none;
+}
+.dropdown-item:hover{
+    text-decoration: underline;
+    color: red;
+}
