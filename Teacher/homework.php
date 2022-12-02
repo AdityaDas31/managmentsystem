@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Resorce/footer.css">
     <link rel="stylesheet" href="../Resorce/bootstrap.css">
     <link rel="stylesheet" href="../Resorce/studentmanage.css">
     <link rel="stylesheet" href="../Resorce/style.css">
@@ -23,7 +24,9 @@ if (!isset($_SESSION['Name'])) {
 <!-- // <a href="logout.php">logout</a>  -->
 <!-- ?> -->
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div id="con">
+    <div id="main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="teacher"><img src="../Resorce/logo.gif" style="height: 70px;" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -163,6 +166,11 @@ if (!isset($_SESSION['Name'])) {
         </tbody>
       </table>
     </div>
+    </div>
+  </div>
+  <footer id="footer">
+  <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
+  <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>
+  </footer>
 </body>
-<!-- <?php include 'footer.php'; ?>  -->
 </html>

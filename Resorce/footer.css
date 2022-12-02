@@ -1,70 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* html{
+    height: 100%;
 }
 body{
-    font-family: 'Segoe UI';
-    font-weight: 400;
-    background-color: #ededed;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 6.74rem;
 }
-.footer{
-    padding: 4  px 0;
-    background-color: #fff;
-    position: fixed;
-    height: 150px;
-    bottom: 0;
-    width: 100%;
-}
-.footer .social{
-    text-align: center;
-    padding-top: 25px;
-    color: #4b4c4d;
-}
-.footer .social a{
-    font-size: 24px;
-    color: inherit;
-    
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-}
-.footer .social a:hover{
-    opacity: 0.9;
-}
-.footer ul{
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
+footer{
+    background: #ced4da;
     font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
+    padding: 35px;
     text-align: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+} */
+*{
+    /* margin: 0; */
+    padding: 0;
 }
-.footer ul li a{
-    color: inherit;
+html, body{
+    height: 100%;
+}
+#con{
+    min-height: 100%;
+}
+#main{
+    overflow: auto;
+    padding-bottom: 100px;
+}
+#footer{
+    background: #ced4da;
+    position: relative;
+    height: 130px;
+    margin-top: -100px;
+    clear: both;
+    font-size: 18px;
+    padding: 35px;
+    text-align: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+#footer a{
     text-decoration: none;
-    opacity: 0.8;
-}
-.footer ul li a:hover{
-    opacity: 1;
-}
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
-}
-.footer .copyright{
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
-}
-.footer .copyright a{
+    font-weight: bold;
     color: black;
-    text-decoration: none;
-    opacity: 0.8;
 }

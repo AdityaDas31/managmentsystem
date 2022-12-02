@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="../Resorce/footer.css">
     <link rel="stylesheet" href="../Resorce/bootstrap.css">
     <link rel="stylesheet" href="../Resorce/student.css">
     <!-- <script src="../Resorce/droupdown.js"></script> -->

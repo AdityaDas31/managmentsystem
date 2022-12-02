@@ -1,4 +1,3 @@
-<?php include 'download.php'; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="../Resorce/bootstrap.css">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="../Resorce/footer.css">
   <link rel="stylesheet" href="../Resorce/style.css">
   <script src="../Resorce/droupdown.js"></script>
   <title>Notice</title>
@@ -17,7 +18,9 @@ if (!$_SESSION['admin']) {
 ?>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div id="con">
+    <div id="main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="admin"><img src="../Resorce/logo.gif" style="height: 70px;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +32,10 @@ if (!$_SESSION['admin']) {
                         <b><a class="nav-link active" aria-current="page" href="teachermanage">Teaching Staff</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link active" aria-current="page" href="studentmanage"><u>Student</u></a></b>
+                        <b><a class="nav-link active" aria-current="page" href="studentmanage">Student</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link active" aria-current="page" href="uplodenotice">Notice</a></b>
+                        <b><a class="nav-link active" aria-current="page" href="uplodenotice"><u>Notice</u></a></b>
                     </li>
                 </ul>
                 <div class="d-flex">
@@ -78,6 +81,12 @@ if (!$_SESSION['admin']) {
             </div>
         </div>
     </div>
+    </div>
+</div>
+<footer id="footer">
+  <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
+  <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>
+  </footer>
 </body>
 
 </html>
