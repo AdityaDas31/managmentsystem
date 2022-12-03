@@ -1,7 +1,8 @@
 <?php
 include 'db.php';
 if(isset($_POST['upload'])){
-    $titel = $_POST['titel']; 
+$publisher = $_POST['publisher'];
+$titel = $_POST['titel']; 
 $class = $_POST['class'];
 $date = date('Y-m-d', strtotime($_POST['ldate']));
 $file_name = $_FILES['myfile']['name'];
@@ -19,7 +20,7 @@ if(!in_array($extension,['mp4','mkv'])){
 }
 else{
     if(move_uploaded_file($file_tep_name,$file_des)){
-        $sql = "INSERT INTO `lecture`(`LectureName`, `Class`, `Date`, `Lecture`) VALUES ('$titel','$class','$date','$file_name')";
+        $sql = "INSERT INTO `lecture`(`Publisher`, `LectureName`, `Class`, `Date`, `Lecture`) VALUES ('$publisher','$titel','$class','$date','$file_name')";
         if(mysqli_query($conn,$sql)){
             ?>
             <script>

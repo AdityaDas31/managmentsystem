@@ -89,6 +89,7 @@ if (!isset($_SESSION['Name'])) {
             <h3 style="margin-top: 10px ;">
               <?php
               if(isset($_SESSION['Name'])){
+                $name = $_SESSION['Name'];
                 echo  $_SESSION['Name'];
               }
               ?>
@@ -105,6 +106,12 @@ if (!isset($_SESSION['Name'])) {
             <div class="col-md-12 bg-white shadow">
                 <form method="POST" action="lectureuplode" enctype="multipart/form-data">
                     <legend class="text-center">Lecture Portal</legend>
+                    <div class="">
+                        <!-- <label for="disabledTextInput" class="form-label">Publisher</label> -->
+                        <input type="hidden" id="disabledTextInput" class="form-control" placeholder="Name of Publisher" name="publisher" value="<?php if(isset($_SESSION['Name'])){
+                          echo  $_SESSION['Name'];
+                        } ?>" readonly>
+                    </div>
                     <div class="mb-3">
                         <label for="disabledTextInput" class="form-label">Lecture Title</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="Lecture Name" name="titel">
@@ -127,7 +134,7 @@ if (!isset($_SESSION['Name'])) {
         </div>
     </div>
     <!---------- Video Search ---------->
-  <div class="container mt-5 text-center ">
+  <div class="container mt-5 text-center mb-5">
     <div class="row">
       <div class="col-md-12 bg-white shadow">
         <form method="POST" action="lecturesearch">
@@ -153,7 +160,7 @@ if (!isset($_SESSION['Name'])) {
     </div>
   </div>
     <!---------- Video ----------->
-    <div class="container">
+    <!-- <div class="container">
         <div class="heading">Video Lecture Gallery</div>
         <div class="video-container">
         <?php
@@ -174,7 +181,39 @@ if (!isset($_SESSION['Name'])) {
             }
             ?>
         </div>
+    </div> -->
+    <div class="container">
+    <div class="row">
+      <h3 class="text-center mt-3">Video Lecture</h3>
+      <table class="table table-success table-striped">
+        <thead class="text-center">
+        <th>Lecture Name</th>
+        <th>Class</th>
+        <th>Date</th>
+        <th>Lecture</th>
+        <th>Delete</th>
+        </thead>
+        <tbody class="text-center">
+        <?php 
+        include 'db.php';
+        $i = 0;
+        $key = 0;
+        $record = mysqli_query($conn, "SELECT * FROM `lecture` WHERE Publisher='$name'");
+        while ($row = mysqli_fetch_array($record)){
+          $i = $key +1; 
+        ?>
+          <tr>
+            <td style="padding-top: 40px;"><?php echo $row['LectureName'] ?></td>
+            <td style="padding-top: 40px;"><?php echo $row['Class'] ?></td>
+            <td style="padding-top: 40px;"><?php echo $row['Date'] ?></td>
+            <td><video width="200px"  controls><source src="<?php echo '../Lecture/'.$lecture; ?>" type="video/mp4"></video></td>
+            <td style="padding-top: 40px;"><a href="lecturedelete.php?ID=<?php echo $row['id'] ?>"class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
+          </tr>
+        <?php } ?>
+        </tbody>
+      </table>
     </div>
+  </div>
   </div>
 </div>
 <footer id="footer">

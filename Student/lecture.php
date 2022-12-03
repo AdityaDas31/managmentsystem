@@ -18,9 +18,13 @@
 <?php
 session_start();
 $_SESSION['Name'];
+$_SESSION['class'];
 if (!isset($_SESSION['Name'])) {
-    header("Location: student");
+    header("Location: student");  
 }
+// if(isset($_SESSION['class'])){
+
+// }
 // <?php echo "<h1>Welcome " . $_SESSION['Name'] . "</h1>"; 
 ?>
 <!-- // <a href="logout.php">logout</a>  -->
@@ -97,10 +101,11 @@ if (!isset($_SESSION['Name'])) {
               <input type="text" class="form-control" name="titel" id="inputEmail3" placeholder="Enter Lecture Titel" required>
             </div>
           </div>
-          <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Class</label>
+          <div class="row">
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="class" id="inputPassword3" placeholder="Enter Class" required>
+              <input type="hidden" class="form-control" name="class" id="inputPassword3" placeholder="Enter Class" value="<?php if(isset($_SESSION['class'])){
+                          echo  $_SESSION['class'];
+                        } ?>" readonly required>
             </div>
           </div>    
           <div class="row mb-3">
@@ -159,8 +164,9 @@ if (!isset($_SESSION['Name'])) {
         <div class="heading">Video Lecture Gallery</div>
         <div class="video-container">
         <?php
+            $class = $_SESSION['class'];
             include 'db.php';
-            $q = "SELECT * FROM `lecture` order by lecture.id desc";
+            $q = "SELECT * FROM `lecture` WHERE `Class`='$class' order by lecture.id desc";
             $query = mysqli_query($conn,$q);
             while($row=mysqli_fetch_array($query)){
                 $lecture = $row['Lecture'];

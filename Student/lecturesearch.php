@@ -29,7 +29,7 @@ if (!isset($_SESSION['Name'])) {
 <body>
   <div id="con">
     <div id="main">
-        <!-- Nav bar -->
+              <!-- Nav bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="student"><img src="../Resorce/logo.gif" style="height: 70px;" alt=""></a>
@@ -130,7 +130,7 @@ if (!isset($_SESSION['Name'])) {
   }
   ?>
     </div>
-  </div>
+  </div> 
   <footer id="footer">
   <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
   <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>

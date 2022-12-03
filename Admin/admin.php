@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Resorce/footer.css">
+  <!-- <link rel="stylesheet" href="../Resorce/footer.css"> -->
   <link rel="stylesheet" href="../Resorce/bootstrap.css">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -302,7 +302,7 @@ if (!$_SESSION['admin']) {
           </div>
         </div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 mb-3">
         <div class="card">
           <div class="card-body">
             <div class="row">
@@ -348,10 +348,18 @@ if (!$_SESSION['admin']) {
   </div>
     </div>
   </div>
-<footer id="footer">
+  <footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background: #ced4da; font-size: 18px;">
+  © Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School
+  <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank" style="text-decoration: none; font-weight: bold; color: black;">Aditya Das</a></p>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- <footer id="footer">
   <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
   <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>
-  </footer>
+  </footer> -->
 </body>
 
 </html>

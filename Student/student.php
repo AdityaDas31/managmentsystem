@@ -41,7 +41,7 @@ include 'header.php';
             <td><?php echo $i ?></td>
             <td><?php echo $file['Name'] ?></td>
             <td><?php echo $file['Date'] ?></td>
-            <td><a href="../Notice/<?php echo $file['Notice'] ?>" class="btn btn-primary">Download</a></td>
+            <td><a href="../Notice/<?php echo $file['Notice'] ?>" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-down"></i></a></td>
           </tr>
         <?php endforeach; ?>
         </tbody>

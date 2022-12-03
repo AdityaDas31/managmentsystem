@@ -1,6 +1,5 @@
 <?php
 include 'db.php';
-
 $sql = "SELECT * FROM `notice` order by notice.id desc";
 
 $result = mysqli_query($conn,$sql);

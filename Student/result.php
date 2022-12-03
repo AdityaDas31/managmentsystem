@@ -152,7 +152,7 @@ if (!isset($_SESSION['Name'])) {
                     <td>
                       <?php echo $row1['Tital'] ?>
                     </td>
-                    <td><a href="../Result/<?php echo $row1['Result'] ?>" class="btn btn-primary">Download</a></td>
+                    <td><a href="../Result/<?php echo $row1['Result'] ?>" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-down"></i></a></td>
                   </tr>
                 <?php
                 }

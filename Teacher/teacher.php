@@ -8,6 +8,7 @@ include 'header.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../Resorce/footer.css">
     <link rel="stylesheet" href="../Resorce/bootstrap.css">
     <link rel="stylesheet" href="teacher.css">
@@ -25,6 +26,7 @@ include 'header.php';
         <th>Notice Title</th>
         <th>Notice Date & Time</th>
         <th>Download</th>
+        <th>Delete</th>
         </thead>
         <tbody class="text-center">
         <?php 
@@ -36,7 +38,8 @@ include 'header.php';
             <td><?php echo $i ?></td>
             <td><?php echo $file['Name'] ?></td>
             <td><?php echo $file['Date'] ?></td>
-            <td><a href="../Notice/<?php echo $file['Notice'] ?>" class="btn btn-primary">Download</a></td>
+            <td><a href="../Notice/<?php echo $file['Notice'] ?>" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-down"></i></a></td>
+            <td><a href="noticedelete.php?ID=<?php echo $file['id'] ?>"class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
           </tr>
         <?php endforeach; ?>
         </tbody>
@@ -57,6 +60,7 @@ include 'header.php';
         <?php 
         include 'db.php';
         $i = 0;
+        $key = 0;
         $record = mysqli_query($conn, "SELECT * FROM `result`");
         while ($row = mysqli_fetch_array($record)){
           $i = $key +1; 
@@ -65,7 +69,7 @@ include 'header.php';
             <td><?php echo $row['Name'] ?></td>
             <td><?php echo $row['StudentID'] ?></td>
             <td><?php echo $row['Tital'] ?></td>
-            <td><a href="../Result/<?php echo $row['Result'] ?>" class="btn btn-primary">Download</a></td>
+            <td><a href="../Result/<?php echo $row['Result'] ?>" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-down"></i></a></td>
           </tr>
         <?php } ?>
         </tbody>
