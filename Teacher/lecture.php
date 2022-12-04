@@ -207,7 +207,7 @@ if (!isset($_SESSION['Name'])) {
             <td style="padding-top: 40px;"><?php echo $row['Class'] ?></td>
             <td style="padding-top: 40px;"><?php echo $row['Date'] ?></td>
             <td><video width="200px"  controls><source src="<?php echo '../Lecture/'.$lecture; ?>" type="video/mp4"></video></td>
-            <td style="padding-top: 40px;"><a href="lecturedelete.php?ID=<?php echo $row['id'] ?>"class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
+            <td style="padding-top: 40px;"><a href="lecturedelete.php?ID=<?php echo $row['id'] ?>" onclick="return lecturedelete()" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
           </tr>
         <?php } ?>
         </tbody>
@@ -220,5 +220,6 @@ if (!isset($_SESSION['Name'])) {
   <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
   <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>
   </footer>
+  <script src="../Resorce/checkdelete.js"></script>
 </body>
 </html>

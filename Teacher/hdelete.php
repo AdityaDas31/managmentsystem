@@ -9,8 +9,9 @@ if($delete){
     ?>
         <script>
             alert("Home Work Successfully Deleted");
-            location.replace("teacher");
+            location.replace("homework");
         </script>
+        <META http-equiv="Refresh" content="0; URL=http://localhost/hit/Managment%20System/Teacher/homework"></META>
     <?php
 }
 else{

@@ -11,6 +11,7 @@ if($delete){
             alert("Notice Successfully Deleted");
             location.replace("teacher");
         </script>
+        <META http-equiv="Refresh" content="0; URL=http://localhost/hit/Managment%20System/Teacher/teacher"></META>
     <?php
 }
 else{

@@ -4,5 +4,5 @@ session_destroy();
 ?>
 <Script>
 location.replace("../index");
-alert("Goodbye see you soon!")
+alert('Goodbye see you soon!')
 </Script>

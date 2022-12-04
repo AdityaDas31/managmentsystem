@@ -141,7 +141,7 @@ if (!$_SESSION['admin']) {
                               <td><?php echo $row1['DOB'] ?></td>
                               <td><img src=<?php echo $row1['Image'] ?> height='90px' width='100px'></td>
                               <td><a href="Supdate.php?ID=<?php echo $row1['id'] ?>" class='btn btn-primary'><i class='fa-regular fa-pen-to-square'></a></td>
-                              <td><a href="Sdelete.php?ID=<?php echo $row1['id']?>" class="btn btn-danger"><i class="fa-solid fa-user-slash"></a></td>
+                              <td><a href="Sdelete.php?ID=<?php echo $row1['id']?>" onclick="return studentdelete()" class="btn btn-danger"><i class="fa-solid fa-user-slash"></a></td>
                             </tr>
                           <?php
                           }
@@ -200,7 +200,7 @@ if (!$_SESSION['admin']) {
       <td>$row[DOB]</td>
       <td><img src='$row[Image]' height= '90px' width='100px'></td>
       <td><a href='Supdate.php?ID=$row[id]' class='btn btn-primary'><i class='fa-regular fa-pen-to-square'></i></a></td>
-      <td><a href='Sdelete.php?ID=$row[id]' class='btn btn-danger'><i class='fa-solid fa-user-slash'></i></a></td>
+      <td><a href='Sdelete.php?ID=$row[id]' onclick='return studentdelete()' class='btn btn-danger'><i class='fa-solid fa-user-slash'></i></a></td>
       </tr>
       ";
           ?>
@@ -278,7 +278,7 @@ if (!$_SESSION['admin']) {
                               <td><?php echo $row2['Department'] ?></td>
                               <td><img src=<?php echo $row2['Image'] ?> height='90px' width='100px'></td>
                               <td><a href="Tupdate.php?Id=<?php echo $row2['id'] ?>" class='btn btn-primary'><i class="fa-regular fa-pen-to-square"></a></td>
-                              <td><a href="Tdelete.php?Id=<?php echo $row2['id'] ?>" class="btn btn-danger"><i class="fa-solid fa-user-slash"></a></td>
+                              <td><a href="Tdelete.php?Id=<?php echo $row2['id'] ?>" onclick="return teacherdelete()" class="btn btn-danger"><i class="fa-solid fa-user-slash"></a></td>
                             </tr>
                           <?php
                           }
@@ -332,7 +332,7 @@ if (!$_SESSION['admin']) {
       <td>$row[Department]</td>
       <td><img src='$row[Image]' height= '90px' width='100px'></td>
       <td><a href='Tupdate.php?Id=$row[id]' class='btn btn-primary'><i class='fa-regular fa-pen-to-square'></a></td>
-      <td><a href='Tdelete.php?Id=$row[id]' class='btn btn-danger'><i class='fa-solid fa-user-slash'></a></td>
+      <td><a href='Tdelete.php?Id=$row[id]' onclick='return teacherdelete()' class='btn btn-danger'><i class='fa-solid fa-user-slash'></a></td>
       </tr>
       ";
           ?>
@@ -360,6 +360,7 @@ if (!$_SESSION['admin']) {
   <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
   <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>
   </footer> -->
+  <script src="../Resorce/checkdelete.js"></script>
 </body>
 
 </html>

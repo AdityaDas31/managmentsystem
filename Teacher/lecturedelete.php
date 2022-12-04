@@ -11,6 +11,7 @@ if($delete){
             alert("Lecture Successfully Deleted");
             location.replace("lecture");
         </script>
+        <META http-equiv="Refresh" content="0; URL=http://localhost/hit/Managment%20System/Teacher/lecture"></META>
     <?php
 }
 else{

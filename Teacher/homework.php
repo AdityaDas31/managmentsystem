@@ -134,7 +134,9 @@ if (!isset($_SESSION['Name'])) {
             </div>
         </div>
     </div>
-    
+    <div class="container">
+
+    </div>
     <div class="row">
       <h3 class="text-center mt-3">How Work Table</h3>
       <table class="table table-success table-striped">
@@ -159,8 +161,8 @@ if (!isset($_SESSION['Name'])) {
             <td><?php echo $file['Subject'] ?></td>
             <td><?php echo $file['Class'] ?></td>
             <td><?php echo $file['Date'] ?></td>
-            <td><a href="../Home Work/<?php echo $file['Work'] ?>" class="btn btn-primary">Download</a></td>
-            <td><a href="hdelete?ID=<?php echo $file['id']?>" class="btn btn-danger">Delete</a></td>
+            <td><a href="../Home Work/<?php echo $file['Work'] ?>" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-down"></i></a></td>
+            <td><a href="hdelete?ID=<?php echo $file['id']?>" class="btn btn-danger" onclick="return homeworkdelete()"><i class="fa-solid fa-trash"></i></a></td>
           </tr>
         <?php endforeach; ?>
         </tbody>
@@ -172,5 +174,6 @@ if (!isset($_SESSION['Name'])) {
   <p>© Copyright <script>document.write(new Date().getFullYear())</script>--Oliva School</p>
   <p>Design and Developed by: <a href="https://www.linkedin.com/in/aditya-das-513883222?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJ57FP0esQ0WqqQX6Wx2s8w%3D%3D" target="_blank">Aditya Das</a></p>
   </footer>
+  <script src="../Resorce/checkdelete.js"></script>
 </body>
 </html>
