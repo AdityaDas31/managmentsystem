@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2022 at 08:49 AM
+-- Generation Time: Dec 04, 2022 at 07:46 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -71,6 +71,7 @@ INSERT INTO `homework` (`id`, `Name`, `Subject`, `Class`, `Date`, `Work`, `Size`
 
 CREATE TABLE `lecture` (
   `id` int(11) NOT NULL,
+  `Publisher` varchar(100) NOT NULL,
   `LectureName` varchar(100) NOT NULL,
   `Class` varchar(100) NOT NULL,
   `Date` date NOT NULL,
@@ -81,11 +82,10 @@ CREATE TABLE `lecture` (
 -- Dumping data for table `lecture`
 --
 
-INSERT INTO `lecture` (`id`, `LectureName`, `Class`, `Date`, `Lecture`) VALUES
-(6, 'notice', '10', '2022-11-06', 'videoplayback (1).mkv'),
-(7, 'notice 2', '11', '2022-11-30', 'videoplayback.mp4'),
-(8, 'notice 3', '11', '2022-11-06', 'videoplayback (1).mkv'),
-(9, 'notice 4', '11', '2022-11-27', 'videoplayback (1).mkv');
+INSERT INTO `lecture` (`id`, `Publisher`, `LectureName`, `Class`, `Date`, `Lecture`) VALUES
+(11, 'Abir Das', 'Lecture 150', '12', '2022-12-04', 'videoplayback.mp4'),
+(12, 'Aditya Das', 'python', '12', '2022-12-03', 'videoplayback.mp4'),
+(13, 'Aditya Das', 'java', '11', '2022-12-03', 'videoplayback (1).mkv');
 
 -- --------------------------------------------------------
 
@@ -106,11 +106,8 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `Name`, `Date`, `Notice`, `Size`) VALUES
-(19, 'notice', '2022-10-09 12:29:00', '15201219074_Aditya.docx', 910901),
-(20, 'notice', '2022-10-31 10:43:00', 'CET RANK CARD.pdf', 114639),
-(21, 'notice2', '2022-11-04 19:12:00', 'Resume.pdf', 268321),
-(30, 'notice 5', '2022-11-06 18:18:00', 'Resume.pdf', 268321),
-(31, 'notice 6', '2022-11-06 18:24:00', 'Resume.pdf', 268321);
+(40, 'notice', '2022-12-03 11:43:00', 'YDM.pdf', 259766),
+(41, 'notice1', '2022-12-03 00:43:00', 'YDM.pdf', 259766);
 
 -- --------------------------------------------------------
 
@@ -257,13 +254,13 @@ ALTER TABLE `homework`
 -- AUTO_INCREMENT for table `lecture`
 --
 ALTER TABLE `lecture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `result`
