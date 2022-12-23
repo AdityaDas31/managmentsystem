@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 04, 2022 at 07:46 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Host: localhost:3306
+-- Generation Time: Dec 23, 2022 at 06:55 AM
+-- Server version: 10.5.16-MariaDB
+-- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `managmentsystem`
+-- Database: `id19919878_managmentsystem`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `admin`, `password`) VALUES
-(1, 'admin', 'admin');
+(2, 'admin', 'admin007');
 
 -- --------------------------------------------------------
 
@@ -83,9 +84,9 @@ CREATE TABLE `lecture` (
 --
 
 INSERT INTO `lecture` (`id`, `Publisher`, `LectureName`, `Class`, `Date`, `Lecture`) VALUES
-(11, 'Abir Das', 'Lecture 150', '12', '2022-12-04', 'videoplayback.mp4'),
-(12, 'Aditya Das', 'python', '12', '2022-12-03', 'videoplayback.mp4'),
-(13, 'Aditya Das', 'java', '11', '2022-12-03', 'videoplayback (1).mkv');
+(14, 'Aditya Das', 'python', '12', '2022-12-04', 'videoplayback.mp4'),
+(16, 'Anish Sen', 'DBMS', '10', '2022-12-04', 'videoplayback (2).mp4'),
+(17, 'Anish Sen', 'Java', '11', '2022-12-04', 'Functions in Java _ Practice Questions _ Complete Placement Course _ Lecture 8.mp4');
 
 -- --------------------------------------------------------
 
@@ -106,8 +107,9 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `Name`, `Date`, `Notice`, `Size`) VALUES
-(40, 'notice', '2022-12-03 11:43:00', 'YDM.pdf', 259766),
-(41, 'notice1', '2022-12-03 00:43:00', 'YDM.pdf', 259766);
+(21, 'notice2', '2022-11-04 19:12:00', 'Resume.pdf', 268321),
+(30, 'notice 5', '2022-11-06 18:18:00', 'Resume.pdf', 268321),
+(31, 'notice 6', '2022-11-06 18:24:00', 'Resume.pdf', 268321);
 
 -- --------------------------------------------------------
 
@@ -157,8 +159,9 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `Name`, `Roll`, `StudentID`, `Class`, `DOB`, `Image`, `Street`, `City`, `State`, `Zip`) VALUES
-(10, 'Aditya Das', '2', 'test1234', '12', '2000-12-31', 'studentimage/Photo.jpg', '1041/1, Central Park, Naihati', 'Naihati', 'West Bengal', '743165'),
-(11, 'Abir Das', '4', 'test4321', '11', '2022-11-04', 'studentimage/955345.jpg', '1041/1, Central Park, Naihati', 'Naihati', 'West Bengal', '743165');
+(12, 'Aditya Das', '1', 'Aditya1234', '12', '2000-12-31', 'studentimage/Google 288x288_000831.jpg', '1041/1, Central Park, Naihati', 'Naihati', 'West Bengal', '743165'),
+(13, 'Kaustav Ghosh', '2', 'Kaustav1234', '10', '2001-05-01', 'studentimage/Picsart_22-10-05_11-58-45-853 (1).jpg', 'Pratappur', 'Chinsurah', 'West Bengal', '000000'),
+(15, 'Anish Sen', '3', 'Anish1234', '11', '2000-12-08', 'studentimage/WhatsApp Image 2022-12-04 at 13.31.07.jpg', 'N.A.', 'Bally', 'West Bengal', '711227');
 
 -- --------------------------------------------------------
 
@@ -184,9 +187,8 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`id`, `Name`, `TeacherID`, `Department`, `Image`, `Phone`, `Street`, `City`, `State`, `Zip`) VALUES
-(7, 'Aditya Das', '256398745214', 'BCA', 'teacherimage/Photo.jpg', '6289547876', '1041/1, Central Park, Naihati', 'Naihati', 'West Bengal', '743165'),
-(8, 'Abir Das', '256398745214hf', 'BCA', 'teacherimage/955345.jpg', '6289547876', '1041/1, Central Park, Naihati', 'North 24 Parganas', 'West Bengal', '743165'),
-(9, 'Abir', '256398745214hfh', 'BBA', 'teacherimage/PSX_20190326_215016.jpg', '6289547876', '1041/1, Central Park, Naihati', 'North 24 Parganas', 'West Bengal', '743165');
+(7, 'Aditya Das', 'T1234', 'BCA', 'teacherimage/Photo.jpg', '6289547876', '1041/1, Central Park, Naihati', 'Naihati', 'West Bengal', '743165'),
+(11, 'Anish Sen', 'T4321', 'BBA', 'teacherimage/WhatsApp Image 2022-12-04 at 13.31.07.jpg', '6289547000', 'N.A.', 'Bally', 'West Bengal', '711227');
 
 --
 -- Indexes for dumped tables
@@ -242,7 +244,7 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `homework`
@@ -254,13 +256,13 @@ ALTER TABLE `homework`
 -- AUTO_INCREMENT for table `lecture`
 --
 ALTER TABLE `lecture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `result`
@@ -272,13 +274,13 @@ ALTER TABLE `result`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
